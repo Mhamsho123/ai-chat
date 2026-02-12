@@ -78,38 +78,6 @@ function ChatInput({ messages, setMessages, onClose }) {
   return (
     <section className={`terminal-chat ${messages.length > 0 ? 'expanded' : ''}`}>
       <div className="chat-container">
-        <button 
-          className="legend-button" 
-          onClick={() => setShowLegend(!showLegend)}
-          title="Show color legend"
-        >
-          🎨
-        </button>
-        {showLegend && (
-          <div className="legend-popup">
-            <div className="legend-title">Subject Colors</div>
-            <div className="legend-item">
-              <span className="legend-color science">🔴</span>
-              <span>Science</span>
-            </div>
-            <div className="legend-item">
-              <span className="legend-color math">🔵</span>
-              <span>Math</span>
-            </div>
-            <div className="legend-item">
-              <span className="legend-color history">🟢</span>
-              <span>History</span>
-            </div>
-            <div className="legend-item">
-              <span className="legend-color religion">🟣</span>
-              <span>Religion</span>
-            </div>
-            <div className="legend-item">
-              <span className="legend-color default">⚫</span>
-              <span>Other</span>
-            </div>
-          </div>
-        )}
         {messages.length > 0 && (
           <button className="close-chat-button" onClick={handleClose} title="Close chat">
             ✕ Clear Board
@@ -121,6 +89,9 @@ function ChatInput({ messages, setMessages, onClose }) {
               const topicColor = getTopicColor(msg.text)
               return (
                 <div key={index} className={`message ${msg.type} ${topicColor}`}>
+                  <span className="message-label">
+                    {msg.type === 'user' ? 'You:' : 'Teacher:'}
+                  </span>
                   <span className={`message-text ${topicColor}`}>{msg.text}</span>
                 </div>
               )
