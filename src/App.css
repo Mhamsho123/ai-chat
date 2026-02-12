@@ -1,6 +1,8 @@
 .terminal-app {
   min-height: 100vh;
-  background: #000000;
+  background: #f5f5dc;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.03) 2px, rgba(0,0,0,.03) 4px);
   display: flex;
   flex-direction: column;
   height: 100vh;

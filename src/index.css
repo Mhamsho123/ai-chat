@@ -5,11 +5,11 @@
 }
 
 :root {
-  font-family: "JetBrains Mono", "Fira Code", "SF Mono", "Menlo", "Consolas", "Liberation Mono", "Courier New", monospace;
+  font-family: 'Kalam', cursive;
   line-height: 1.5;
   font-weight: 400;
-  color: #00ff41;
-  background-color: #000000;
+  color: #2c3e50;
+  background-color: #f5f5dc;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -20,8 +20,10 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #000000;
-  color: #00ff41;
+  background: #f5f5dc;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.03) 2px, rgba(0,0,0,.03) 4px);
+  color: #2c3e50;
 }
 
 #root {

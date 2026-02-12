@@ -13,7 +13,7 @@ function Head({ onClose }) {
           <span className="terminal-button minimize"></span>
           <span className="terminal-button maximize"></span>
         </div>
-        <div className="terminal-title">AI_CHAT_TERMINAL.exe</div>
+        <div className="board-title">📚 Study Helper</div>
       </div>
     </header>
   )
